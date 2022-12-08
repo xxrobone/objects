@@ -18,7 +18,7 @@ let animalArray = [
     name: 'Frilled-neck',
     food: 'Insects',
     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus debitis architecto iste dignissimos tempora nulla ratione! Doloremque aperiam beatae aut natus voluptatum enim obcaecati ipsam suscipit tenetur consequatur, perspiciatis architecto rem veniam quis, quod aliquid magnam similique reiciendis dicta. Quas dolor vitae nam molestiae aliquam iste velit. Doloribus nobis, facilis adipisci voluptate reiciendis tempore officia culpa asperiores expedita esse omnis.',
-    imgURL: '../assets/images/mammals/humpbackwhale.jpg',
+    imgURL: '../assets/images/reptiles/frilled.jpg',
   },
 ];
 
