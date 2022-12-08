@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 
+@import url('./css/slider.css');
+
 * {
 	box-sizing: border-box;
 }
@@ -21,6 +23,11 @@ nav {
 }
 header {
 	grid-area: header;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-image: url('./assets/images/background.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -29,6 +36,7 @@ header {
 	background-blend-mode: difference;
 	color: White;
 	text-shadow: 2px 2px 5px black;
+	
 }
 
 header > h1 {
@@ -36,7 +44,7 @@ header > h1 {
 	color: #fafafa;
 }
 header > h2 {
-	font-weight: 400;
+	font-weight: 800;
 	color: orangered;
 }
 
@@ -63,7 +71,7 @@ footer {
 
 /* Styles for the HTML elements */
 .slider {
-	background-color: #1A1A1A;
+	background-color:transparent;
 	color: #E5E5E5;
 }
 main {
@@ -78,7 +86,7 @@ aside {
 	background-color: #7F7F7F;
 	color: #F2F2F2;
 }
-header,
+
 footer {
 	display: flex;
 	align-items: center;
