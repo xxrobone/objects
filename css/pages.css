@@ -242,11 +242,9 @@ footer {
 }
 /* Media query */
 @media only screen and (min-device-width: 800px) {
-	.nav-main a {
+	.nav-main > li > a {
 		padding: 1rem;
-		font-size: 1rem;
-		line-height: 1.2;
-		text-align: center;
+		
 	}
 
 	aside {
