@@ -45,7 +45,7 @@ header {
 	width: 100%;
 	background-color: #282828;
 	color: white;
-	font-size: calc(0.8vmin + 1.4vmax);
+	font-size: calc(0.5vmin + 1.2vmax);
 	font-weight: 400;
 	padding: 0.5rem 1rem;
 	margin: 0.25rem 0;
@@ -225,7 +225,7 @@ footer {
 	display: block;
 	margin: 0;
 	padding: .5rem 0;
-	font-size: calc(0.8vmin + 1.4vmax);
+	font-size: calc(0.5vmin + 1.2vmax);
 	line-height: 1;
 	text-align: center;
 	text-decoration: none;
