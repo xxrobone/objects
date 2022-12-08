@@ -57,3 +57,19 @@ countries.forEach(function (country) {
 
   document.getElementById('country').appendChild(div);
 });
+
+function header() {
+    let header = document.createElement(header)
+    header.style.width = '100%'
+    header.style.height = '100px'
+    header.style.backgroundColor = '#282828'
+
+    let nav = document.createElement('nav')
+    nav.style.backgroundColor = 'transparent'
+    nav.style.width = '100%'
+    nav.style.height = 'inherit'
+    nav.style.display = 'flex'
+    nav.style.alignItems = 'alig'
+    let li = document.createElement('li')
+    li.style.listStyle = 'none'
+}

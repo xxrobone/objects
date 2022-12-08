@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	max-width: 1200px;
+	margin: 2rem auto;
+	background-color: #F8F4F4;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Grid areas and defining them */
+nav {
+	margin: 0;
+	padding: 0;
+	grid-area: nav;
+}
+header {
+	grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-menu {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+}
+.sidebar-item {
+	width: 100%;
+	background-color: #282828;
+	color: white;
+	font-size: calc(0.8vmin + 1.4vmax);
+	font-weight: 400;
+	padding: 0.5rem 1rem;
+	margin: 0.25rem 0;
+}
+.sidebar-item:hover {
+	background-color: #4d4d4d;
+	cursor: pointer;
+}
+article {
+	grid-area: article;
+}
+
+article > p {
+	display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+} 
+
+.p-show {
+	display: block;
+	overflow: visible;
+	-webkit-line-clamp: auto;
+}
+.animal-desc {
+	background-color: rgb(199, 199, 199);
+	color: #121212;
+	padding: 0.25rem 1rem;
+}
+aside {
+	grid-area: image;
+	width: 100vw;
+}
+.image {
+	width: 100vw;
+}
+.info {
+	grid-area: info;
+}
+footer {
+	grid-area: footer;
+}
+
+/* pages container / grid */
+.pages-container {
+	display: grid;
+	 /* placement of grid areas */
+	grid-template-areas:
+		"nav"
+		"header"
+		"sidebar"
+		"image"
+		"article"
+		"info"
+		"footer";
+	grid-gap: .5rem;
+	padding: .25rem;
+}
+
+/* All elements styling */
+article {
+	background-color: #E5E5E5;
+	color: #1A1A1A;
+}
+aside {
+	background-color: #BFBFBF;
+	color: #4D4D4D;
+    width: 100vw;
+    height: 260px;
+}
+
+.image {
+	width: 100vw;
+}
+
+.image:hover {
+    transform: scale(1.2);
+    border: 5px solid black;
+    cursor: pointer;
+}
+img {
+    object-fit: cover;    
+    background-color: #121212;
+	color: #4D4D4D;
+}
+
+.image {
+	width: 100vw;
+}
+.info {
+	background-color: #7F7F7F;
+	color: #F2F2F2;
+}
+header,
+footer {
+	background-color: #4D4D4D;
+	color: #BFBFBF;
+}
+
+ /* media quaries */
+@media only screen and (min-width: 550px) {
+	.pages-container {
+		grid-template-columns: repeat(2,1fr);
+		/* placement of grid areas */
+		grid-template-areas:
+			"nav nav"
+			"header header"
+			"sidebar sidebar"
+			"image ."
+			"article article"
+			"info info"
+			"footer footer";
+		grid-gap: .75rem;
+		padding: .5rem;
+	}
+}
+@media only screen and (min-width: 800px) {
+	.pages-container {
+		grid-template-columns: repeat(4, auto);
+		/* placement of grid areas */
+		grid-template-areas:
+			"nav nav nav nav"
+			"sidebar header header header"
+			"sidebar article article image"
+			"sidebar info info info"
+			"footer footer footer footer";
+		grid-gap: 1rem;
+		padding: .75rem;
+	}
+}
+
+/* grid-boxes */
+.grid-box {
+	padding: .5rem;
+	font-size: 1.25rem;
+	border-radius: .125rem;
+}
+/* 2 media queries grid boxes */
+@media only screen and (min-width: 550px) {
+	.grid-box {
+		padding: .75rem;
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (min-width: 800px) {
+	.grid-box {
+		padding: 1rem;
+		font-size: 1.75rem;
+	}
+}
+
+
+/* nav */
+.nav-main {
+	display: grid;
+	grid-template-columns: repeat(3,minmax(75px,1fr)); /* 3 links in a row */
+	grid-gap: .25rem;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: .5rem 0;
+	list-style: none;
+}
+/* nav media quaries */
+@media only screen and (min-width: 380px) {
+	.nav-main {
+		grid-template-columns: repeat(3,minmax(100px,1fr)); 
+	}
+}
+@media only screen and (min-width: 550px) {
+	.nav-main {
+		grid-template-columns: repeat(auto-fit,minmax(75px,1fr)); 
+	}
+}
+/* Nav styling */
+.nav-main > li > a {
+	display: block;
+	margin: 0;
+	padding: .5rem 0;
+	font-size: calc(0.8vmin + 1.4vmax);
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	background: #D3D3D3;
+	color: #333;
+	transition: all .75s ease;
+}
+.nav-main a:hover {
+	background-color: #333;
+	color: #D3D3D3;
+}
+.nav-main a:active {
+    border-bottom: 3px solid black;
+}
+/* Media query */
+@media only screen and (min-device-width: 800px) {
+	.nav-main a {
+		padding: 1rem;
+		font-size: 1rem;
+		line-height: 1.2;
+		text-align: center;
+	}
+
+	aside {
+		background-color: #BFBFBF;
+		color: #4D4D4D;
+		width: 360px;
+		height: 260px;
+	}
+	
+
+	.image {
+		width: 100%;
+		height: 100%;
+		transition: all 0.4s ease-in-out;
+	}
+}
+
