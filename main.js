@@ -14,13 +14,17 @@ function run() {
 }
 
 function changeImage() {
+  let width = screen.width;
   if (idx > img.length - 1) {
     idx = 0;
   } else if (idx < 0) {
     idx = img.length - 1;
   }
-
-  images.style.transform = `translateX(${-idx * 800}px)`;
+  if (width < 800) {
+    images.style.transform = `translateX(${-idx * 400}px)`;
+  } else {
+    images.style.transform = `translateX(${-idx * 800}px)`;
+  }
 }
 
 function resetInterval() {
