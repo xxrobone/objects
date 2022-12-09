@@ -42,13 +42,15 @@ header {
 	flex-direction: column;
 }
 .sidebar-item {
+	padding: 0.5rem 1rem;
+	margin: 0.25rem 0;
 	width: 100%;
 	background-color: #282828;
 	color: white;
 	font-size: calc(0.5vmin + 1.2vmax);
 	font-weight: 400;
-	padding: 0.5rem 1rem;
-	margin: 0.25rem 0;
+	text-transform: capitalize;
+	
 }
 .sidebar-item:hover {
 	background-color: #4d4d4d;
@@ -70,10 +72,15 @@ article > p {
 	overflow: visible;
 	-webkit-line-clamp: auto;
 }
+
+.animal-name {
+	text-transform: capitalize;
+}
 .animal-desc {
 	background-color: rgb(199, 199, 199);
 	color: #121212;
 	padding: 0.25rem 1rem;
+	font-size: calc(1vmin + 1.2vmax);
 }
 aside {
 	grid-area: image;

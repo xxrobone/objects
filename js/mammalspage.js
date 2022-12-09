@@ -25,6 +25,26 @@ let animalArray = [
     food: 'Vegetables',
     desc: 'The word kangaroo derives from the Guugu Yimithirr word gangurru, referring to eastern grey kangaroos. The name was first recorded as "kanguru" on 12 July 1770 in an entry in the diary of Sir Joseph Banks; this occurred at the site of modern Cooktown, on the banks of the Endeavour River, where HMS Endeavour under the command of Lieutenant James Cook was beached for almost seven weeks to repair damage sustained on the Great Barrier Reef. Cook first referred to kangaroos in his diary entry of 4 August. Guugu Yimithirr is the language of the people of the area. A common myth about the kangaroos English name is that it was a Guugu Yimithirr phrase for "I dont know" or "I dont understand". According to this legend, Cook and Banks were exploring the area when they happened upon the animal. They asked a nearby local what the creatures were called. The local responded "kangaroo", said to mean "I dont know/understand", which Cook then took to be the name of the creature. Anthropologist Walter Roth was trying to correct this legend as far back as in 1898, but few took note until 1972 when linguist John B. Haviland in his research with the Guugu Yimithirr people was able to confirm that gangurru referred to a rare large dark-coloured species of kangaroo.However, when Phillip Parker King visited the Endeavour River region in 1819 and 1820, he maintained that the local word was not kangaroo but menuah perhaps referring to a different species of macropod. There are similar, more credible stories of naming confusion, such as with the Yucatán Peninsula. Kangaroos are often colloquially referred to as roos. Male kangaroos are called bucks, boomers, jacks, or old men; females are does, flyers, or jills; and the young ones are joeys. The collective noun for a group of kangaroos is a mob, court, or troupe.',
     imgURL: '../assets/images/mammals/roo.jpg',
+    info: [
+      {
+        food: 'food',
+      },
+      {
+        lifespan: '- years',
+      },
+      {
+        group: 'mammals',
+      },
+      {
+        length: '-m',
+      },
+      {
+        weight: '-kg',
+      },
+      {
+        found: 'Everywhere',
+      },
+    ],
   },
 ];
 
