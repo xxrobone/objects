@@ -64,20 +64,6 @@ article {
 	grid-area: article;
 }
 
-article > p {
-	max-width: 90%;
-	display: -webkit-box;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-} 
-
-.p-show {
-	display: block;
-	overflow: visible;
-	-webkit-line-clamp: auto;
-}
-
 .animal-name {
 	text-transform: capitalize;
 }
@@ -86,6 +72,22 @@ article > p {
 	color: #121212;
 	padding: 0.25rem 1rem;
 	font-size: 1rem;
+	cursor: pointer;
+}
+
+article > p {
+	max-width: 90%;
+	display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  
+} 
+
+.p-show {
+	display: block;
+	overflow: visible;
+	-webkit-line-clamp: auto;
 }
 
 .animal-info > p {
@@ -139,7 +141,7 @@ aside {
 	background-color: #BFBFBF;
 	margin: 0;
 	padding: 0;
-    width: 90vw;
+    width: 100%;
     height: auto;
 	right: 0;
 	left: 0;
