@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -9,11 +11,13 @@ html {
 }
 
 body {
-	max-width: 1200px;
+	width:100%;
+	min-height: 100vh;
 	margin: 2rem auto;
 	background-color: #F8F4F4;
 	font-family: 'Open Sans', sans-serif;
 }
+
 
 /* Grid areas and defining them */
 nav {
@@ -61,6 +65,7 @@ article {
 }
 
 article > p {
+	max-width: 90%;
 	display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 3;
@@ -82,12 +87,15 @@ article > p {
 	padding: 0.25rem 1rem;
 	font-size: calc(1vmin + 1.2vmax);
 }
+
+.animal-info > p {
+	font-size: calc(1vmin + 1.2vmax);
+}
+.animal-info > p > span {
+	color: #000;
+}
 aside {
 	grid-area: image;
-	width: 100vw;
-}
-.image {
-	width: 100vw;
 }
 .info {
 	grid-area: info;
@@ -98,6 +106,7 @@ footer {
 
 /* pages container / grid */
 .pages-container {
+	margin: 0;
 	display: grid;
 	 /* placement of grid areas */
 	grid-template-areas:
@@ -108,24 +117,32 @@ footer {
 		"article"
 		"info"
 		"footer";
-	grid-gap: .5rem;
-	padding: .25rem;
+	grid-gap: 0;
+	padding: 0.25rem 0;
+	width: 100%;
 }
 
 /* All elements styling */
 article {
+	max-width: 100%;
 	background-color: #E5E5E5;
 	color: #1A1A1A;
 }
 aside {
 	background-color: #BFBFBF;
-	color: #4D4D4D;
-    width: 100vw;
-    height: 260px;
+	margin: 0;
+	padding: 0;
+    width: 90vw;
+    height: auto;
+	right: 0;
+	left: 0;
 }
 
 .image {
-	width: 100vw;
+	width: 100%;
+	height: auto;
+	object-fit: cover; 
+	object-position: center;
 }
 
 .image:hover {
@@ -133,21 +150,14 @@ aside {
     border: 5px solid black;
     cursor: pointer;
 }
-img {
-    object-fit: cover;    
-    background-color: #121212;
-	color: #4D4D4D;
-}
 
-.image {
-	width: 100vw;
-}
 .info {
 	background-color: #7F7F7F;
 	color: #F2F2F2;
 }
 header,
 footer {
+	max-width: 100%;
 	background-color: #4D4D4D;
 	color: #BFBFBF;
 }
@@ -165,12 +175,13 @@ footer {
 			"article article"
 			"info info"
 			"footer footer";
-		grid-gap: .75rem;
-		padding: .5rem;
+		grid-gap: .75rem 0;
+		padding: .5rem 0;
 	}
 }
 @media only screen and (min-width: 800px) {
 	.pages-container {
+		margin: 0 auto;
 		grid-template-columns: repeat(4, auto);
 		/* placement of grid areas */
 		grid-template-areas:
@@ -180,13 +191,15 @@ footer {
 			"sidebar info info info"
 			"footer footer footer footer";
 		grid-gap: 1rem;
-		padding: .75rem;
+		padding: .75rem 0;
+		max-width: 1200px;
 	}
 }
 
 /* grid-boxes */
 .grid-box {
-	padding: .5rem;
+	padding: 0;
+	margin: 0;
 	font-size: 1.25rem;
 	border-radius: .125rem;
 }
@@ -248,7 +261,7 @@ footer {
     border-bottom: 3px solid black;
 }
 /* Media query */
-@media only screen and (min-device-width: 800px) {
+@media screen and (min-device-width: 800px) {
 	.nav-main > li > a {
 		padding: 1rem;
 		
